@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hiringpage/pages/home.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,24 +16,28 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: const Color.fromARGB(255, 19, 19, 19),
             textTheme: TextTheme(
                 bodyText1: TextStyle(
+                    fontFamily: 'Berlin Sans FB Demi',
                     color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold),
                 bodyText2: TextStyle(
+                    fontFamily: 'Berlin Sans FB Demi',
                     fontSize: 20,
                     color: Colors.white,
-                    fontWeight: FontWeight.w200),
+                    fontWeight: FontWeight.normal),
                 headline1: TextStyle(
+                    fontFamily: 'Berlin Sans FB Demi',
                     fontSize: 85,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 255, 255, 255)),
                 headline2: TextStyle(
+                    fontFamily: 'Berlin Sans FB Demi',
                     fontSize: 40,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.normal,
                     color: const Color.fromARGB(255, 202, 168, 245))),
             outlinedButtonTheme: OutlinedButtonThemeData(
                 style: OutlinedButton.styleFrom(
-              primary: const Color.fromARGB(255, 202, 168, 245),
+              foregroundColor: const Color.fromARGB(255, 202, 168, 245),
               side: BorderSide(
                   color: Color.fromARGB(255, 202, 168, 245), width: 2.0),
               backgroundColor: Color.fromARGB(100, 202, 168, 245),

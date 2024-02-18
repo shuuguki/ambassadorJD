@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Stack(
+              alignment: Alignment.center,
               children: [
                 ColorFiltered(
                   colorFilter: ColorFilter.mode(
@@ -27,34 +28,36 @@ class HomePage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * .5,
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                            Color.fromARGB(80, 1, 1, 1),
-                            Color.fromARGB(80, 1, 1, 1),
-                          ])),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * .5,
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                            Color.fromARGB(80, 1, 1, 1),
-                            Color.fromARGB(255, 19, 19, 19)
-                          ])),
-                      child: Text(''),
-                    ),
-                  ],
-                ),
+                Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * .5,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                Color.fromARGB(80, 1, 1, 1),
+                                Color.fromARGB(80, 1, 1, 1),
+                              ])),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height * .5,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                Color.fromARGB(80, 1, 1, 1),
+                                Color.fromARGB(255, 19, 19, 19)
+                              ])),
+                          child: Text(''),
+                        ),
+                      ],
+                    )),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -255,6 +258,18 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: MediaQuery.of(context).size.height * .1),
             Text('Join Our Team', style: Theme.of(context).textTheme.headline1),
+            SizedBox(height: MediaQuery.of(context).size.height * .1),
+            Container(
+              alignment: Alignment.center,
+              height: 1.0, // Thickness of the line
+              width: MediaQuery.of(context).size.width *
+                  .64, // Make the container full width
+              color: Color.fromARGB(255, 202, 168, 245), // Color of the line
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height * .05),
+            Text('Campus Ambassador',
+                style: Theme.of(context).textTheme.bodyText1),
+            SizedBox(height: MediaQuery.of(context).size.height * .2),
           ],
         ))));
   }
