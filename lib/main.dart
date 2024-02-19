@@ -11,29 +11,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
+            primaryColor: Color.fromARGB(255, 202, 168, 245),
             scaffoldBackgroundColor: const Color.fromARGB(255, 19, 19, 19),
             textTheme: const TextTheme(
-                bodyLarge: TextStyle(
-                    fontFamily: 'Berlin Sans FB Demi',
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold),
-                bodyMedium: TextStyle(
+              bodyLarge: TextStyle(
                   fontFamily: 'Berlin Sans FB Demi',
-                  fontSize: 20,
                   color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+              bodyMedium: TextStyle(
+                fontFamily: 'Berlin Sans FB Demi',
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),
+              bodySmall: TextStyle(
+                fontFamily: 'Berlin Sans FB Demi',
+                fontSize: 18,
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),
+              displayLarge: TextStyle(
+                  fontFamily: 'Berlin Sans FB Demi',
+                  fontSize: 85,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 255, 255, 255)),
+              displayMedium: TextStyle(
+                  fontFamily: 'Berlin Sans FB Demi',
+                  fontSize: 40,
                   fontWeight: FontWeight.normal,
-                ),
-                displayLarge: TextStyle(
-                    fontFamily: 'Berlin Sans FB Demi',
-                    fontSize: 85,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 255, 255, 255)),
-                displayMedium: TextStyle(
-                    fontFamily: 'Berlin Sans FB Demi',
-                    fontSize: 40,
-                    fontWeight: FontWeight.normal,
-                    color: Color.fromARGB(255, 202, 168, 245))),
+                  color: Color.fromARGB(255, 202, 168, 245)),
+            ),
             outlinedButtonTheme: OutlinedButtonThemeData(
                 style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(255, 202, 168, 245),

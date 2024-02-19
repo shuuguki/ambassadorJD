@@ -7,9 +7,9 @@ class ambassadorApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        ),
+        appBar: MediaQuery.of(context).size.width < 400
+            ? null
+            : AppBar(backgroundColor: Color.fromARGB(255, 202, 168, 245)),
         body: SingleChildScrollView(
             child: Padding(
                 padding: EdgeInsets.symmetric(
@@ -19,6 +19,7 @@ class ambassadorApplication extends StatelessWidget {
                   children: [
                     SizedBox(height: MediaQuery.of(context).size.height * .1),
                     Text('Campus Ambassador',
+                        textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme
                             .displayLarge!
@@ -49,7 +50,9 @@ class ambassadorApplication extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: RichText(
                           text: TextSpan(
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: MediaQuery.of(context).size.width < 500
+                                ? Theme.of(context).textTheme.bodySmall
+                                : Theme.of(context).textTheme.bodyMedium,
                             children: <TextSpan>[
                               TextSpan(
                                   text: 'Role:',

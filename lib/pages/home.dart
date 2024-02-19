@@ -15,17 +15,11 @@ class HomePage extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                ColorFiltered(
-                  colorFilter: const ColorFilter.mode(
-                    Color.fromARGB(255, 19, 19, 19),
-                    BlendMode.color,
-                  ),
-                  child: Image.asset(
-                    'assets/images/landing.png',
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height,
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                  'assets/images/landing.png',
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  fit: BoxFit.cover,
                 ),
                 Align(
                     alignment: Alignment.center,
@@ -317,9 +311,16 @@ class HomePage extends StatelessWidget {
                   const Color.fromARGB(255, 202, 168, 245), // Color of the line
             ),
             SizedBox(height: MediaQuery.of(context).size.height * .05),
-            Text('Campus Ambassador',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ambassadorApplication()));
+                },
+                style: Theme.of(context).elevatedButtonTheme.style,
+                child: const Text('Apply Today!',
+                    style: TextStyle(color: Colors.black))),
             SizedBox(height: MediaQuery.of(context).size.height * .2),
           ],
         ))));

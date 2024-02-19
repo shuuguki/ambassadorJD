@@ -62,9 +62,9 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Berlin Sans FB
+    - family: Berlin Sans FB Demi
       fonts:
-        - asset: assets/fonts/BRLNSR.TTF
+        - asset: assets/fonts/Berlin_Sans_FB_Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
